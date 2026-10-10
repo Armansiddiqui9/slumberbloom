@@ -1,4 +1,4 @@
-# SlumberBloom 🌙
+# SlumberBloom
 
 > **Bitcoin for plants. Pokémon Go for your sleep.**
 >
@@ -8,7 +8,7 @@
 
 ---
 
-## 🌿 What is this?
+## What is this?
 
 **For a child:** Imagine you have a little garden that grows *only while you sleep*. When you put your phone in your pocket and go to bed, the garden starts working on your behalf. The longer you stay away (at least 30 minutes!), the more it grows — but only up to 10 hours per night, because the game respects your real life. When you wake up, your garden shows you exactly how long you were away, with a little block of math that proves it really happened — like a receipt for your patience. Then you water it, claim your reward, and watch it bloom. Over days, weeks, years, your garden becomes a rare, personal story — and the whole world can see the rules, but no one can fake your time.
 
