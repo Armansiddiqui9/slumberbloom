@@ -39,7 +39,7 @@ The landing page introduces the protocol: what a Night Block is, why patience is
 
 ---
 
-## 🚀 The 60-second demo
+## The 60-second demo
 
 Open the server (`./run.sh` or `run.bat`) → `http://localhost:8000/`.
 
@@ -61,7 +61,7 @@ You can also time-travel to +49h (`?t=+49h` in dev) and watch the wilt ladder pl
 
 ---
 
-## ✨ What makes it special
+## What makes it special
 
 | Feature | What it is | Why it matters |
 |---|---|---|
@@ -75,7 +75,7 @@ You can also time-travel to +49h (`?t=+49h` in dev) and watch the wilt ladder pl
 
 ---
 
-## 🛠️ How it works (simple)
+## How it works (simple)
 
 ```
 You put phone away → time passes (≥30 min, ≤10h/day) → you wake → Dew block minted → Claim → Dawn settles → Frost settled → Lantern verifies → Water grows
@@ -85,7 +85,7 @@ The engine (`packages/engine/src/`) is **pure** — it takes explicit inputs, ne
 
 ---
 
-## 📦 What's in the repo
+## What's in the repo
 
 ```
 slumberbloom/
@@ -109,7 +109,7 @@ slumberbloom/
 
 ---
 
-## ⚡ Get started (tested — all commands verified)
+## Get started (tested — all commands verified)
 
 ### Prerequisites
 
@@ -144,7 +144,7 @@ pnpm --filter @sb/engine test  # 3/3 passed (golden vectors, merkle)
 pnpm --filter @sb/web build    # 46 modules → dist/ (verified)
 ```
 
-> ⚠️ **Note:** `pnpm approve-builds esbuild` may be required on a fresh install (pnpm 12's new supply-chain policy; approved once, then cached).
+> **Note:** `pnpm approve-builds esbuild` may be required on a fresh install (pnpm 12's new supply-chain policy; approved once, then cached).
 
 ### 3. Rebuild the static site (if you edit design/mockups)
 
@@ -172,7 +172,7 @@ Photos never leave the device; `packages/ai/` templates (`quests.json`) fall bac
 
 ---
 
-## 🧪 How to use it (the demo loop — verified end-to-end)
+## How to use it (the demo loop — verified end-to-end)
 
 **Preparation:** Start `./run.sh`. Open `http://localhost:8000/play/`.
 
@@ -191,7 +191,7 @@ Photos never leave the device; `packages/ai/` templates (`quests.json`) fall bac
 
 ---
 
-## 🏗️ Technology stack (verified from source)
+## Technology stack (verified from source)
 
 | Layer | Technology | Role |
 |---|---|---|
@@ -208,7 +208,7 @@ Photos never leave the device; `packages/ai/` templates (`quests.json`) fall bac
 
 ---
 
-## 🗂️ Project structure (simplified)
+## Project structure (simplified)
 
 ```
 slumberbloom/
@@ -244,7 +244,7 @@ slumberbloom/
 
 ---
 
-## 🧪 Tests, build & quality (verified)
+## Tests, build & quality (verified)
 
 ```bash
 pnpm --filter @sb/engine test      # 3/3 passed (golden, merkle) ✅
@@ -259,7 +259,7 @@ python3 scripts/build_site.py     # site rebuilt (7 pages) ✅
 
 ---
 
-## 🌐 Deployment (local — v1 has no real server)
+## Deployment (local — v1 has no real server)
 
 There is no Hono / Postgres / cron for v1 — that is v1.1 (`packages/server-core/`, `packages/adapters-local/` → `HttpApi`). The demo runs fully locally:
 
@@ -284,7 +284,7 @@ When v1.1 lands: swap `apps/web/src/api/game-api.ts` (one file) to import `HttpA
 
 ---
 
-## 🗺️ Roadmap (real — from `plan.md` / `README.md` §14)
+## Roadmap (real — from `plan.md` / `README.md` §14)
 
 | Version | When | Headline | Status (v1) |
 |---|---|---|---|
@@ -298,7 +298,7 @@ Everything cut for v1 (from `plan.md` §8): Seed Capsules (polished), Postcards,
 
 ---
 
-## 🛡️ Security & reporting
+## Security & reporting
 
 - **No secrets exposed in history** — `Grep` over all source returned zero credential patterns; `.env` never committed.
 - **Report privately** — `SECURITY.md` explains how (don't open public issues for vulnerabilities).
@@ -307,7 +307,7 @@ Everything cut for v1 (from `plan.md` §8): Seed Capsules (polished), Postcards,
 
 ---
 
-## 🙏 Credits & acknowledgments
+## Credits & acknowledgments
 
 - **Protocol design:** the Bloom Protocol (Bitcoin-inspired: SHA-256 + Merkle + halving + public randomness) — fully documented in `README.md` §2 and `docs/ARCHITECTURE.md`.
 - **Engine:** `@noble/hashes` (SHA-256, sync), `vitest` (tests), `vite` + `react` + `typescript`.
@@ -317,7 +317,7 @@ Everything cut for v1 (from `plan.md` §8): Seed Capsules (polished), Postcards,
 
 ---
 
-## 📄 References (all verified in repo)
+## References (all verified in repo)
 
 - **Pitch / full protocol:** [`README.md`](README.md) (§1–14 — this file)
 - **Build / demo / cuts:** [`plan.md`](plan.md)
