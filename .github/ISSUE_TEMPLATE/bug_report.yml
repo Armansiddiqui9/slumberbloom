@@ -1,0 +1,35 @@
+name: Bug report
+description: Report an issue with the SlumberBloom demo (v1 hackathon prototype)
+labels: [bug, triage]
+body:
+  - type: markdown
+    attributes:
+      label: What kind of bug?
+      description: Pick one.
+      required: true
+    settings:
+      options:
+        - The server won't start (run.sh / run.bat / uvicorn)
+        - A demo step is broken (tuck-in, claim, dawn, lantern, garden, water)
+        - The React /play/ demo is broken (time travel, block, lantern)
+        - A build / test command fails (pnpm, python, dotnet)
+        - The static site is wrong (design/mockups rebuilt wrong)
+        - Something in docs/ARCHITECTURE.md or CLAUDE.md is wrong
+        - Other
+  - type: textarea
+    attributes:
+      label: Reproduction steps
+      description: Exact commands / URLs to reproduce.
+    settings:
+      value: 1. `./run.sh` (or `pnpm --filter @sb/web dev`)
+      2. Open `http://localhost:8000` (or `/play/`)
+      3. ...
+  - type: textarea
+    attributes:
+      label: Expected vs actual
+    settings:
+      value: Expected: ...\nActual: ...
+  - type: input
+    attributes:
+      label: Environment
+      description: OS, Node version, Python version, browser, .NET SDK if mobile.

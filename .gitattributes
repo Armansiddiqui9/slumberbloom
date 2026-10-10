@@ -1,0 +1,42 @@
+# Normalize text files; keep binary files as-is.
+* text=auto eol=lf
+
+# Source
+*.ts text eol=lf
+*.tsx text eol=lf
+*.js text eol=lf
+*.css text eol=lf
+*.json text eol=lf
+*.py text eol=lf
+*.cs text eol=lf
+*.md text eol=lf
+*.html text eol=lf
+
+# Shell scripts must be LF (run.sh runs under bash)
+*.sh text eol=lf
+
+# Windows batch files keep CRLF
+*.bat text eol=crlf
+
+# Lockfiles are text but never merge — mark them binary-ish to force full-file diffs
+pnpm-lock.yaml -diff
+
+# Generated site output
+server/static/site/* text eol=lf
+
+# Images
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.svg text
+
+# Fonts
+*.woff binary
+*.woff2 binary
+
+# Archives
+*.zip binary
+*.tar binary
+*.gz binary

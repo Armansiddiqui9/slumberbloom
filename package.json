@@ -1,0 +1,1 @@
+{ "name": "slumberbloom", "private": true, "scripts": { "dev": "pnpm --filter @sb/web dev", "build": "pnpm --filter @sb/web build", "test": "pnpm --filter @sb/engine test" } }

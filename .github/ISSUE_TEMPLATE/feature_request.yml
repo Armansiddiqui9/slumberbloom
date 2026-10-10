@@ -1,0 +1,28 @@
+name: Feature request
+description: Suggest a feature or improvement for SlumberBloom v1 / v1.1
+labels: [enhancement, triage]
+body:
+  - type: textarea
+    attributes:
+      label: What feature?
+      description: One-line summary, then details.
+  - type: dropdown
+    attributes:
+      label: Where does it belong?
+      options:
+        - Engine (packages/engine/ — charter, dawn, merkle, block rules)
+        - Web / Play demo (apps/web/ — screens, App.tsx, game-api)
+        - Server (server/main.py — API, state.json, build_site)
+        - Mobile scaffold (mobile-game/)
+        - AI / photo judging (packages/ai/ — must not touch consensus)
+        - Design (design/mockups/, design/screens/)
+        - Documentation (README.md, CLAUDE.md, docs/ARCHITECTURE.md, plan.md)
+        - Dev tools (time travel, world-sim, test fixtures)
+  - type: textarea
+    attributes:
+      label: Why?
+      description: How does this make the demo better / more correct?
+  - type: input
+    attributes:
+      label: Related issue / doc
+      description: Link to an existing issue or section in docs/ARCHITECTURE.md.

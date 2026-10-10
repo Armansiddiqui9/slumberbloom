@@ -1,0 +1,54 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+# No pnpm-lock.yaml is committed yet — CI installs without --frozen-lockfile until
+# the first lockfile is generated (`pnpm install` then commit pnpm-lock.yaml).
+jobs:
+  web:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 9
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: pnpm
+      - run: pnpm install
+      - run: pnpm --filter @sb/web build
+      - run: pnpm --filter @sb/engine test
+
+  server:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: python -m pip install -r server/requirements.txt
+      - run: python -m py_compile server/main.py scripts/build_site.py
+      - run: python scripts/build_site.py
+      - name: smoke-test the API
+        run: |
+          python -m uvicorn server.main:app --port 8000 &
+          sleep 5
+          curl -fsS http://localhost:8000/api/garden
+          curl -fsS -X POST http://localhost:8000/api/tuck-in
+          kill %1
+
+  mobile:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: "9.0.x"
+      - run: dotnet build mobile-game/slumberbloom.mobile.csproj --no-restore
+      - run: dotnet run --project mobile-game/slumberbloom.mobile.csproj --no-build

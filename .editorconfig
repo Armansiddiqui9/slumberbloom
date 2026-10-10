@@ -1,0 +1,29 @@
+# EditorConfig — defaults for the whole repo
+# Match the existing code: 2-space indent, LF, UTF-8, final newline, no trailing whitespace
+root = true
+
+[*]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+indent_style = space
+indent_size = 2
+
+[*.py]
+indent_size = 4
+
+[*.{sh,bat}]
+indent_size = 2
+
+[*.cs]
+indent_size = 4
+
+[*.{html,css}]
+indent_size = 2
+
+[*.md]
+trim_trailing_whitespace = false
+
+[Makefile]
+indent_style = tab

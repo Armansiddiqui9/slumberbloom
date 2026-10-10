@@ -1,0 +1,2 @@
+{ "compilerOptions": { "target": "ES2022", "module": "ESNext", "moduleResolution": "Bundler", "strict": true, "jsx": "react-jsx", "skipLibCheck": true, "noEmit": true,
+  "baseUrl": ".", "paths": { "@sb/engine": ["packages/engine/src"], "@sb/contracts": ["packages/contracts/src"], "@sb/adapters-local": ["packages/adapters-local/src"] } } }
